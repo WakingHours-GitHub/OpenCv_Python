@@ -10,7 +10,7 @@ import cv2 as cv
 # 可以使用1、0或者-1来替代上面三个标志
 # 注意：如果加载的路径有错误，不会报错，会返回一个None值
 
-img = cv.imread("../img/910709.jpg")  # 、
+img = cv.imread("../../img/space_boat.jpg")  # 、
 # print(img)
 
 # 2. 显示图像:
@@ -43,7 +43,7 @@ plt.imshow(img[:, :, : :-1]) # plt显示直接在右边显示
 
 plt.show() # display all open figures
 
-img_gray = cv.imread("../img/910709.jpg", cv.IMREAD_GRAYSCALE) # 以灰度读入
+img_gray = cv.imread("../../img/space_boat.jpg", cv.IMREAD_GRAYSCALE) # 以灰度读入
 plt.imshow(img, cmap=plt.cm.gray)
 plt.show()
 
