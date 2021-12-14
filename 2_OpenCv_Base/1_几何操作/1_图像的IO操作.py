@@ -11,6 +11,7 @@ import cv2 as cv
 # 注意：如果加载的路径有错误，不会报错，会返回一个None值
 
 img = cv.imread("../../img/space_boat.jpg")  # 、
+
 # print(img)
 
 # 2. 显示图像:
@@ -20,8 +21,8 @@ img = cv.imread("../../img/space_boat.jpg")  # 、
 # mat: 需要显示的图像
 # # 2.1 OpenCv
 cv.imshow("image", img)
-# cv.waitKey(0)
-# cv.destroyAllWindows() # 关闭窗口, 并且取消分配任何相关的内存使用
+cv.waitKey(0)
+cv.destroyAllWindows() # 关闭窗口, 并且取消分配任何相关的内存使用
 
 arr = list(range(10))
 # 回想列表的切片操作.
