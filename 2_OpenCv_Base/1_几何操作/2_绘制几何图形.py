@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 # 画直线：
 # cv.line(img, start, end, color, thickness, lineType, shift)
 # img:要绘制直线的图像
-# Start,end: 直线的起点和终点(传入一个元组, 代表坐标) -> (x, y)
+# start,end: 直线的起点和终点(传入一个元组, 代表坐标) -> (x, y)
 # color: 线条的颜色
 # Thickness: 线条宽度
 # lineType: 线的类型
 
-# 画一个园
+# 画一个原型
 # cv.circle(img, center, radius, color, thickness, lineType, shift)
 # img:要绘制圆形的图像
 # Center, radius: 圆心和半径 -> 圆心为元组(x, y), radius单位为像素
@@ -32,12 +32,15 @@ import matplotlib.pyplot as plt
 # org：文本的放置位置
 # fontFace：字体
 # fontScale :字体大小
+"""
+总结: 参数顺序: img, 然后描述位置和大小, 然后颜色, 字体
 
+"""
 
 # 练习:
 img = np.zeros((512, 512, 3), np.uint8)  # 以uint8数据类型创建一个512*512*3的矩阵, 实际上就是img(看你用什么方式去看它)
 # uint8是专门用于存储各种图像的（包括RGB，灰度图像等），范围是从0–255。这里要注意如何转化到uint8类型。
-# print(img)
+# print(img)]
 cv.line(img, (0, 0), (511, 511), (255, 0, 0), 5)
 cv.circle(img, (256, 256), 128, (0, 0, 255), 4, 4)
 cv.line(img, (256, 256), (511, 0), (0, 255, 0), 6)
@@ -51,5 +54,15 @@ plt.imshow(img)
 plt.show()
 
 # 真正的艺术:
-plt.figure(1)
-realArt = np.zeros((512, 512, 3), np.uint8)  #
+# plt.figure(1)
+# realArt = np.zeros((512, 512, 3), np.uint8)  #
+
+plt.figure(2)
+# 画个三角:
+imgBlack = np.zeros([512, 512, 3], np.uint8)
+cv.line(imgBlack, (100,256),(200,300),(0,0,255),5)
+
+
+# plt.ion()
+plt.imshow(imgBlack)
+plt.show()
