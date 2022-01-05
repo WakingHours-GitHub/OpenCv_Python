@@ -52,7 +52,7 @@ boat = cv.imread("../../img/space_boat.jpg", cv.IMREAD_GRAYSCALE)  # 以灰度�
 minVar = 50
 maxVar = 500
 # 进行Canny边缘检测:
-canny_boat = cv.Canny(boat, minVar, maxVar)
+canny_boat = cv.Canny(boat, minVar, maxVar)  # 返回边缘检测的图形.
 
 plt.imshow(canny_boat, cmap=plt.cm.gray)
 plt.show()

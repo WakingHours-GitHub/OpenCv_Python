@@ -58,10 +58,8 @@ if __name__ == '__main__':
     while True:
         is_open, img = cap.read()
         img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-        kp,des = sift.detectAndCompute(img_gray, None)
-        cv.drawKeypoints(img, kp, img, flags=cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-
-
+        kp,des = sift.detectAndCompute(img_gray, None) # 返回特征点
+        cv.drawKeypoints(img, kp, img, flags=cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS) # 画图
 
         cv.imshow("img", img)
         cv.waitKey(1)
